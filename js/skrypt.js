@@ -252,7 +252,7 @@ document.addEventListener("DOMContentLoaded", function() {
           .then(json => {
             let rates = json[0].rates;
             rates.forEach(el => {
-              data.push({innerHTML: '<img width="30" height="30" src="flags/'+el.code+'.svg"></img> <div><div>'+ el.code +'</div><br><div class="currency">'+ el.currency+ '</div></div>', text: el.code, value: el.code, currency: el.mid});
+              data.push({innerHTML: '<img width="30" height="30" src="flags/'+el.code.toLowerCase()+'.svg"></img> <div><div>'+ el.code +'</div><br><div class="currency">'+ el.currency+ '</div></div>', text: el.code, value: el.code, currency: el.mid});
             });
             select.setData(data);
             select1.setData(data);
