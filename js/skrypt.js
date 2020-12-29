@@ -242,7 +242,7 @@ document.addEventListener("DOMContentLoaded", function() {
               if (el.code == 'XCD' ) return;
             }
             
-            data.push({innerHTML: '<img width="30" height="30" src="flags/'+el.code+'.svg"></img> <div><div>'+ el.code +'</div><br><div class="currency">'+ el.currency+ '</div></div>', text: el.code, value: el.code, currency: el.mid});
+            data.push({innerHTML: '<img width="30" height="30" src="flags/'+el.code.toLowerCase()+'.svg"></img> <div><div>'+ el.code +'</div><br><div class="currency">'+ el.currency+ '</div></div>', text: el.code, value: el.code, currency: el.mid});
           });
           
         })
