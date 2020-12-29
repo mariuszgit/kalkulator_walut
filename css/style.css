@@ -1,0 +1,193 @@
+:root {
+    /* colors */
+    --accent-color: #00625a;
+    /* --text-color: #666666; */
+    --text-color: #757575;
+    --header-color: #333333;
+    /* animation */
+    --animation-time: .3s;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--text-color);
+    font-family: "Lato", sans-serif;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-unit {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: url(woman.png) center no-repeat fixed;
+    background-size: cover;
+    display: flex;
+    min-height: 100vh;
+    padding: 60px 20px;
+    width: 100%;
+}
+
+.hero-unit__header {
+    color: var(--header-color);
+    font-size: 3.2rem;
+    margin: 0;
+    font-weight: 700;
+    margin-bottom: 1.8rem;
+}
+
+.hero-unit__subheader {
+    font-size: 1.1rem;
+    text-align: center;
+    font-family: lora;
+    font-style: italic;
+    /* margin: 20px 0 40px 0; */
+    /* margin: 1.5rem 0 3rem 0; */
+    margin-bottom: 3rem;
+    margin-top: 0;
+}
+
+a {
+    color:var(--accent-color);
+}
+
+
+
+.hero-unit__button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 14px auto;
+    border-radius: 50%;
+    border: 1px solid #dcdee2;
+}
+
+.hero-unit__button svg {
+    width: 30px;
+    height: 30px;
+}
+
+.hero-unit__button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: all var(--animation-time);
+
+    transform: rotate(180deg);
+}
+
+
+
+
+
+
+
+/* ---------- FORM ---------- */
+
+input:focus, select:focus, *:focus {
+    outline: 0;
+    /* outline: #00b7aa auto 1px; */
+    /* outline: 1px solid #00625a; */
+}
+input, select, option {
+    /* background: transparent; */
+    border: 0;
+    /* border-bottom: 1px solid #ccc; */
+    display: inline-block;
+    font-family: "Open-sans", sans-serif;
+    font-size: 18px;
+    height: 80px;
+    line-height: 1;
+    margin: 0;
+    padding: 20px 20px;
+    transition: background-color var(--animation-time);
+}
+input {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #dcdee2;
+    border-right: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    /* background-color: rgba(0, 98, 90, .2);
+    border-bottom: 2px solid rgba(0, 98, 90, .1);
+    transition: all var(--animation-time); */
+    transition: background-color var(--animation-time); 
+}
+input:hover {
+    /* background-color: rgba(255, 255, 255, 0.9); */
+    /* border-bottom: 2px solid rgba(0, 98, 90, .6); */
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.ss-main .ss-single-selected {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color var(--animation-time); 
+}
+
+.ss-main .ss-single-selected .currency {
+    display: none;
+}
+.ss-content .currency {
+    /* text-transform: uppercase; */
+    font-size: .8rem;
+    font-family: lora;
+    font-style: italic;
+}
+.ss-content .currency::first-letter {
+    text-transform: uppercase;
+}
+form p {
+    position: relative;
+    display: flex;
+    /* border-radius: 4px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .2); */
+    transition: box-shadow var(--animation-time);
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+form p:hover {
+    /* box-shadow: 0px 0px 15px rgba(0, 0, 0, .4); */
+}
+form p::before {
+    content: attr(data-label);
+    font-size: 13px;
+    position: absolute;
+    left: 12px;
+    top: 5px;
+    font-style: italic;
+    font-family: lora;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* slim-select */
+.ss-single-selected img {
+    margin-right: 10px;
+    margin-left: 10px;
+    opacity: 1;
+} 
+.ss-option img {
+    margin-right: 10px;
+    margin-left: 10px;
+    opacity: 1;
+    box-shadow: box-shadow: 0px 0px 15px rgba(0, 0, 0, .4);
+}
